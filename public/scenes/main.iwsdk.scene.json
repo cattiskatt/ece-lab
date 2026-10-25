@@ -1,0 +1,641 @@
+{
+  "version": "iwsdk.scene.v1",
+  "units": "meters",
+  "components": {
+    "com.iwsdk.components.IBLGradient": {
+      "sky": [
+        0.8,
+        0.86,
+        0.9,
+        1
+      ],
+      "equator": [
+        0.7,
+        0.74,
+        0.75,
+        1
+      ],
+      "ground": [
+        0.48,
+        0.48,
+        0.44,
+        1
+      ],
+      "intensity": 0.32
+    }
+  },
+  "environment": {
+    "toneMapping": "aces",
+    "exposure": 1.12,
+    "shadows": true,
+    "shadowMapType": "pcf"
+  },
+  "resources": {},
+  "nodes": [
+    {
+      "id": "floor",
+      "name": "floor",
+      "content": {
+        "type": "asset",
+        "asset": "floor",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "LocomotionEnvironment": {}
+      }
+    },
+    {
+      "id": "architecture",
+      "name": "architecture",
+      "content": {
+        "type": "asset",
+        "asset": "room",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "boundaries",
+      "name": "boundaries",
+      "content": {
+        "type": "asset",
+        "asset": "walls",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "LocomotionEnvironment": {}
+      }
+    },
+    {
+      "id": "main-bench",
+      "name": "main-bench",
+      "content": {
+        "type": "asset",
+        "asset": "bench",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          -2.1
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "LocomotionEnvironment": {}
+      }
+    },
+    {
+      "id": "scope",
+      "name": "scope",
+      "content": {
+        "type": "asset",
+        "asset": "scope",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          -0.89,
+          1.213,
+          -2.4
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "RayInteractable": {},
+        "LabControl": {
+          "kind": "scope"
+        }
+      }
+    },
+    {
+      "id": "generator",
+      "name": "generator",
+      "content": {
+        "type": "asset",
+        "asset": "generator",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          -0.17,
+          1.213,
+          -2.4
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "RayInteractable": {},
+        "LabControl": {
+          "kind": "generator"
+        }
+      }
+    },
+    {
+      "id": "supply",
+      "name": "supply",
+      "content": {
+        "type": "asset",
+        "asset": "supply",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          0.43,
+          1.213,
+          -2.4
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "RayInteractable": {},
+        "LabControl": {
+          "kind": "supply"
+        }
+      }
+    },
+    {
+      "id": "meter",
+      "name": "meter",
+      "content": {
+        "type": "asset",
+        "asset": "meter",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          0.96,
+          1.213,
+          -2.4
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "RayInteractable": {},
+        "LabControl": {
+          "kind": "meter"
+        }
+      }
+    },
+    {
+      "id": "main-stool",
+      "name": "main-stool",
+      "content": {
+        "type": "asset",
+        "asset": "stool",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          0.8,
+          0,
+          -1.15
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "LocomotionEnvironment": {}
+      }
+    },
+    {
+      "id": "student-bench-0",
+      "name": "student-bench-0",
+      "content": {
+        "type": "asset",
+        "asset": "secondary",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          -4.7,
+          0,
+          -2.3
+        ],
+        "rotationDeg": [
+          0,
+          90,
+          0
+        ]
+      },
+      "components": {
+        "LocomotionEnvironment": {}
+      }
+    },
+    {
+      "id": "student-stool-0",
+      "name": "student-stool-0",
+      "content": {
+        "type": "asset",
+        "asset": "stool",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          -3.9000000000000004,
+          0,
+          -2.3
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "LocomotionEnvironment": {}
+      }
+    },
+    {
+      "id": "student-bench-1",
+      "name": "student-bench-1",
+      "content": {
+        "type": "asset",
+        "asset": "secondary",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          -4.7,
+          0,
+          -6.3
+        ],
+        "rotationDeg": [
+          0,
+          90,
+          0
+        ]
+      },
+      "components": {
+        "LocomotionEnvironment": {}
+      }
+    },
+    {
+      "id": "student-stool-1",
+      "name": "student-stool-1",
+      "content": {
+        "type": "asset",
+        "asset": "stool",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          -3.9000000000000004,
+          0,
+          -6.3
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "LocomotionEnvironment": {}
+      }
+    },
+    {
+      "id": "student-bench-2",
+      "name": "student-bench-2",
+      "content": {
+        "type": "asset",
+        "asset": "secondary",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          -1.7,
+          0,
+          -8.5
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "LocomotionEnvironment": {}
+      }
+    },
+    {
+      "id": "student-stool-2",
+      "name": "student-stool-2",
+      "content": {
+        "type": "asset",
+        "asset": "stool",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          -1.7,
+          0,
+          -7.7
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "LocomotionEnvironment": {}
+      }
+    },
+    {
+      "id": "student-bench-3",
+      "name": "student-bench-3",
+      "content": {
+        "type": "asset",
+        "asset": "secondary",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          2,
+          0,
+          -8.5
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "LocomotionEnvironment": {}
+      }
+    },
+    {
+      "id": "student-stool-3",
+      "name": "student-stool-3",
+      "content": {
+        "type": "asset",
+        "asset": "stool",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          2,
+          0,
+          -7.7
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "LocomotionEnvironment": {}
+      }
+    },
+    {
+      "id": "component-library",
+      "name": "component-library",
+      "content": {
+        "type": "asset",
+        "asset": "shelving",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          4.9,
+          0,
+          -6.4
+        ],
+        "rotationDeg": [
+          0,
+          -45,
+          0
+        ]
+      },
+      "components": {
+        "LocomotionEnvironment": {},
+        "RayInteractable": {},
+        "LabControl": {
+          "kind": "components"
+        }
+      }
+    },
+    {
+      "id": "equipment-rack",
+      "name": "equipment-rack",
+      "content": {
+        "type": "asset",
+        "asset": "rack",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          1.9,
+          0,
+          -5.5
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "LocomotionEnvironment": {},
+        "RayInteractable": {},
+        "LabControl": {
+          "kind": "equipment"
+        }
+      }
+    },
+    {
+      "id": "solder-station",
+      "name": "solder-station",
+      "content": {
+        "type": "asset",
+        "asset": "solder",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          5.9,
+          0,
+          -1.8
+        ],
+        "rotationDeg": [
+          0,
+          -90,
+          0
+        ]
+      },
+      "components": {
+        "LocomotionEnvironment": {},
+        "RayInteractable": {},
+        "LabControl": {
+          "kind": "solder"
+        }
+      }
+    },
+    {
+      "id": "grab-probe",
+      "name": "grab-probe",
+      "content": {
+        "type": "asset",
+        "asset": "probe",
+        "castShadow": true,
+        "receiveShadow": true
+      },
+      "transform": {
+        "position": [
+          0.8,
+          0.9,
+          -1.72
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "RayInteractable": {},
+        "DistanceGrabbable": {
+          "movementMode": "MoveFromTarget",
+          "returnToOrigin": true
+        },
+        "OneHandGrabbable": {}
+      }
+    },
+    {
+      "id": "sun",
+      "transform": {
+        "position": [
+          -4,
+          3.5,
+          1
+        ],
+        "rotationDeg": [
+          -52,
+          -24,
+          0
+        ]
+      },
+      "components": {
+        "DirectionalLight": {
+          "color": [
+            1,
+            0.91,
+            0.76,
+            1
+          ],
+          "intensity": 2.5,
+          "castShadow": true,
+          "shadowMapSize": "2048",
+          "shadowCameraSize": 16,
+          "shadowCameraNear": 0.1,
+          "shadowCameraFar": 25,
+          "shadowRadius": 3,
+          "shadowBias": -0.0002,
+          "shadowNormalBias": 0.012
+        }
+      }
+    },
+    {
+      "id": "ambient",
+      "components": {
+        "HemisphereLight": {
+          "skyColor": [
+            0.82,
+            0.9,
+            1,
+            1
+          ],
+          "groundColor": [
+            0.48,
+            0.47,
+            0.41,
+            1
+          ],
+          "intensity": 1.65
+        }
+      }
+    }
+  ]
+}
